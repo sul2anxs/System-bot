@@ -1,0 +1,22 @@
+{
+  "example_guild_id": {
+    "logs_enabled": true,
+    "logs_channel": null,
+    "warnings": {},
+    "muted_users": [],
+    "logs_settings": {
+      "message_delete": true,
+      "message_edit": true,
+      "member_join": true,
+      "member_leave": true,
+      "member_ban": true,
+      "member_unban": true,
+      "member_kick": true,
+      "member_update": true,
+      "channel_create": true,
+      "channel_delete": true,
+      "guild_update": true,
+      "voice_state_update": true
+    }
+  }
+}
