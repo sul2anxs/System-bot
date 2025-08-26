@@ -44,7 +44,7 @@ async def on_ready():
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name="السيرفر | بوت عربي متقدم"
+            name="نيرال العم"
         )
     )
 
@@ -185,7 +185,7 @@ async def main():
     setup_slash_commands(bot, logs_system)
     
     # الحصول على التوكن من متغيرات البيئة
-    token = os.getenv('DISCORD_TOKEN') or 'ضع_مفتاح_البوت_هنا'
+    token = os.getenv('DISCORD_TOKEN') or MTQwOTYwMDkzNTExNzcxNzUyOA.GJwoFu.eQoZej7Ia1kOtqor1uXPcNwBURU2I74GsFrwr0
     if not token:
         print("❌ لم يتم العثور على DISCORD_TOKEN في متغيرات البيئة!")
         print("يرجى إضافة التوكن عبر: export DISCORD_TOKEN='your_token_here'")
