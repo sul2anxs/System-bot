@@ -1,1 +1,1 @@
-discord.py==2.6.2
+pip freeze > requirements.txt
