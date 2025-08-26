@@ -184,8 +184,13 @@ async def main():
     setup_commands(bot, logs_system, deleted_messages_cache)
     setup_slash_commands(bot, logs_system)
     
-    # التوكن
-    token = توكن هنا 
+    # الحصول على التوكن من متغيرات البيئة
+    token = os.getenv('DISCORD_TOKEN') or 'ضع_مفتاح_البوت_هنا'
+    if not token:
+        print("❌ لم يتم العثور على DISCORD_TOKEN في متغيرات البيئة!")
+        print("يرجى إضافة التوكن عبر: export DISCORD_TOKEN='your_token_here'")
+        return
+    
     try:
         await bot.start(token)
     except discord.LoginFailure:
