@@ -8,6 +8,11 @@ from config import load_config, save_config
 from logs_system import LogsSystem
 from commands import setup_commands
 from slash_commands import setup_slash_commands
+from dotenv import load_dotenv  # ← تم الإضافة لدعم .env
+
+# تحميل متغيرات البيئة من ملف .env
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")  # ← سيقرأ التوكن من ملف .env
 
 # إعداد التشغيل
 intents = discord.Intents.default()
@@ -184,11 +189,9 @@ async def main():
     setup_commands(bot, logs_system, deleted_messages_cache)
     setup_slash_commands(bot, logs_system)
     
-    # التوكن الخاص بالبوت
-    token = 'MTQwOTYwMDkzNTExNzcxNzUyOA.GJwoFu.eQoZej7Ia1kOtqor1uXPcNwBURU2I74GsFrwr0'
-    
+    # تشغيل البوت باستخدام التوكن من .env
     try:
-        await bot.start(token)
+        await bot.start(TOKEN)
     except discord.LoginFailure:
         print("❌ فشل في تسجيل الدخول! تأكد من صحة التوكن.")
     except Exception as e:
