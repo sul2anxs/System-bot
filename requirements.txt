@@ -1,1 +1,6 @@
-pip freeze > requirements.txt
+django
+psycopg2-binary
+dj-database-url
+whitenoise[brotli]
+gunicorn
+uvicorn
