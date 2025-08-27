@@ -11,7 +11,7 @@ def setup_commands(bot, logs_system, deleted_messages_cache):
     async def help_command(ctx):
         """عرض قائمة الأوامر المتاحة"""
         embed = discord.Embed(
-            title="🤖 أوامر البوت العربي المتقدم",
+            title="🤖 neral bot",
             description="قائمة شاملة بجميع أوامر البوت المتاحة",
             color=0x7289DA,
             timestamp=datetime.utcnow()
